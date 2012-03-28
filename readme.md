@@ -6,12 +6,12 @@ developers to experience the simplicity and power of [Markdown](http://daringfir
 To install and start using this application open the following files in your
 favourite editor:
 
-### config/config.php
+#### config/config.php
 The `POSTS_DIR` constant is used for defining where all the .md files are stored
 in their raw format. By default, this is a directory called 'posts_source'. If
 you want to change it, you will only need to change it here and it will be
 altered throughout the application.
-```
+```php
 // Name of directory where markdown posts are stored
 define('POSTS_DIR', 'posts_source');
 ```
@@ -20,19 +20,19 @@ The `ADMIN_EMAIL` constant is currently unused however for future developments i
 will be utilised for any notifications or debugging purposes that require
 further action (i.e. 404's, error handling)
 
-### .htaccess
+#### .htaccess
 To keep the application URL's looking purrrty and user friendly, I added in an
 Apache rewrite so the URL will be `http://domain.com/posts/name-of-post` which
 hands the file to `view_post.php` and goes from there. You can update this if
 you would prefer another URL structure.
 
-### layouts/header.html & layouts/footer.html
+#### layouts/header.html & layouts/footer.html
 Plain and simple storage of static HTML files to allow the customisation of
 your blog's theme and functionlity. The layout is only split into two files
 however if you are comfortable with PHP, this can be easily changed to as many
 or few as you would like.
 
-### view_post.php
+#### view_post.php
 Editting this file isn't super important however if you would like customised
 error messages, throwing exceptions, etc. this is the place to do it.
 
@@ -48,4 +48,5 @@ Fork it, send pull requests, raise issues and bugs - All ideas and contributions
 are welcome.
 
 ## Credits
-- [PHP markdown](https://github.com/wolfie/php-markdown)
+- [PHP markdown](https://github.com/wolfie/php-markdown) for the base class of
+  the application
