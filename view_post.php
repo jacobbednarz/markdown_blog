@@ -9,7 +9,7 @@ $posts_url = POSTS_DIR . DIRECTORY_SEPARATOR . $requested_post . '.md';
 
 if (file_exists($posts_url) && preg_match('/[^a-z_\-0-9]/i', $posts_url))
 {
-    $output = Markdown(file_get_contents(POSTS_DIR . DIRECTORY_SEPARATOR . $requested_post . '.md'));
+    $output = Markdown(file_get_contents($posts_url));
     
     include_once 'layouts/header.html';
     echo $output;
