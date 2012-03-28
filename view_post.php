@@ -26,5 +26,5 @@ else
      * or a dragon breathing fire but to keep it flexible, I will
      * leave it be for now.
      */
-	echo 'Post does not exist';
+    echo 'Post does not exist';
 }
