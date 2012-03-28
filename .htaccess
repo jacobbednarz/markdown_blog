@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+# Create that purrrty URL schema like:
+# http://domain.com/posts/hello-world
+RewriteRule ^posts/(.*)$ ./view_post.php?name=$1
