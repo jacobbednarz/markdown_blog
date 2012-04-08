@@ -10,11 +10,7 @@ favourite editor:
 The `POSTS_DIR` constant is used for defining where all the .md files are stored
 in their raw format. By default, this is a directory called 'posts_source'. If
 you want to change it, you will only need to change it here and it will be
-altered throughout the application.
-```php
-// Name of directory where markdown posts are stored
-define('POSTS_DIR', 'posts_source');
-```
+altered throughout the application. `define('POSTS_DIR', 'posts_source');`
 
 The `ADMIN_EMAIL` constant is currently unused however for future developments it
 will be utilised for any notifications or debugging purposes that require
