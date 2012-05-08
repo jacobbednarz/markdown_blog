@@ -1,3 +1,9 @@
+==========
+title: This is just the first example post
+author: Jacob
+date: 06/05/2012
+==========
+
 # H1 header tag
 
 * * *	
