@@ -38,6 +38,17 @@ also be the URL of the post and the URL handler will only accept alphanumeric
 characters (a-z 0-9), underscores and hyphens. If this naming convention is not
 followed, the post will not be rendered.
 
+To add a new post just create the `.md` file within the `posts_source` directory and
+add your content! That's all. By creating the file you have created a new blog
+post and it will be automatically made live to the public.
+
+```Shell
+Create a file called "new-post-feature.md" will render the following:
+
+# Direct link: http://domain.com/posts/new-post-feature
+# Listing on the archives page: New post feature
+```
+
 ## Contributing
 The only way to improve something and make it better is to contribute to it.
 Fork it, send pull requests, raise issues and bugs - All ideas and contributions
