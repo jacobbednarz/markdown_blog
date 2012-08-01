@@ -1,3 +1,8 @@
+===
+author: jacob
+date: 2012-03-04 
+===
+
 # H1 header tag
 
 * * *	

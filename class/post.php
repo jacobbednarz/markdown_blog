@@ -4,9 +4,14 @@ class Post {
 
     function __construct() {}
 
-    function get_post_data()
+    /**
+     * Break the file into smaller, more useful pieces
+     *
+     * $file - The file to break apart
+     */
+    function split_file($file) 
     {
-        
+        return explode('===', $file, 3);
     }
 
     /**
