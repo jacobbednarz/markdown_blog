@@ -1,0 +1,7 @@
+# Editor specific
+.swp
+.backup
+
+# OS specific
+*.thumbs
+*.ds_store
