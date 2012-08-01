@@ -5,9 +5,42 @@ class Post {
     function __construct() {}
 
     /**
-     * Break the file into smaller, more useful pieces
+     * Create an array of slugs to utilise within the document.
      *
-     * $file - The file to break apart
+     * $input - The input of data to separate.
+     */
+    function slugify($input)
+    {
+        $lines = explode("\n", $input);
+        
+        $a = array(); 
+        $cur = array();
+        
+        foreach($lines as $line)
+        {
+            if (empty($line) || strpos($line, ':') === false) continue;
+            list($key, $value) = explode(': ', $line);
+            
+            if (!array_key_exists($key, $cur))
+            {
+                $cur[$key] = $value;
+            }
+            else
+            {
+                $a[] = $cur;
+                $cur = array();
+                $cur[$key] = $value;
+            }
+        }
+        
+        $a[] = $cur;
+        return $a;
+    }
+
+    /**
+     * Break the file into smaller, more useful pieces.
+     *
+     * $file - The file to break apart.
      */
     function split_file($file) 
     {
@@ -15,9 +48,9 @@ class Post {
     }
 
     /**
-     * Clean up the post path to be used in URL's
+     * Clean up the post path to be used in URL's.
      *
-     * $title - The document title
+     * $title - The document title.
      */
     function path_to_post($title)
     {
@@ -25,9 +58,9 @@ class Post {
     }
 
     /**
-     * Format the blog title to remove extensions and hypens
+     * Format the blog title to remove extensions and hyphens.
      *
-     * $title - The document title
+     * $title - The document title.
      */
     function format_blog_title($title)
     {

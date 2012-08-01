@@ -12,10 +12,14 @@ if (file_exists($posts_url) && preg_match('/[^a-z_\-0-9]/i', $posts_url))
     // Split the file into slugs and the post
     $file_pieces = $post->split_file(file_get_contents($posts_url));
     $post_data = $file_pieces[1];
-    $post = $file_pieces[2];
-    
-    $output = Markdown($post);
-    
+    $post_content = $file_pieces[2];
+
+    $post->slugify($post_data);
+
+    // Parse it!
+    $output = Markdown($post_content);
+
+    // Make it pretty 
     include_once 'layouts/header.html';
     echo $output;
     include_once 'layouts/footer.html';
