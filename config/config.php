@@ -1,5 +1,8 @@
 <?php
 
+require_once 'class/post.php';
+$post = new Post();
+
 // File check - pretty arbitary
 define('FILE_CHECK', 'mf7gf3jh');
 
